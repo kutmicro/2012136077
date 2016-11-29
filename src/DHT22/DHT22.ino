@@ -21,12 +21,12 @@ void loop() {
     Serial.println("Failed to read from DHT");
   } else {
     //온도, 습도 표시 시리얼 모니터 출력
-    Serial.print("Humidity: "); 
-    Serial.print(h);
-    Serial.print(" %\t");
     Serial.print("Temperature: "); 
     Serial.print(t);
-    Serial.println(" *C");
+    Serial.print(" *C");
+    Serial.print("Humidity: "); 
+    Serial.print(h);
+    Serial.println(" %\t");
   }
   delay(2000);
 }
