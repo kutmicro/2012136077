@@ -14,6 +14,7 @@ void loop() {
   // 센서의 온도와 습도를 읽어온다.
   float h = dht.readHumidity();   //변수 h에 습도 값 저장
   float t = dht.readTemperature();//변수 t에 온도 값 저장
+  float di = (5*t/9)-(0.55*(1-h/100)*((5*t/9)-26))+32;//불쾌지수 값 계산
  
   if (isnan(t) || isnan(h)) {
     //isnan(value)는 어떤 값 value가 숫자인지 아닌지 여부를 나타냄
