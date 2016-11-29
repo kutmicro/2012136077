@@ -27,8 +27,11 @@ void loop() {
     Serial.print(" *C");
     Serial.print("Humidity: "); 
     Serial.print(h);
+    Serial.print(" %\t");
+    Serial.print("DI : ");
+    Serial.print(di);
     Serial.println(" %\t");
   }
-  delay(2000);
+  delay(1000);
 }
 
