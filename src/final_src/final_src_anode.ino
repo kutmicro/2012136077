@@ -168,8 +168,7 @@ void loop() {
       char buf_t[10], buf_h[10], buf_di[10];          //값 송신을 위한 문자열 버퍼
       float h = dht.readHumidity();                   //변수 h에 습도 값 저장
       float t = dht.readTemperature();                //변수 t에 온도 값 저장
-      float di = (5 * t / 9) - (0.55 * (1 - h / 100) * ((5 * t / 9) - 26)) + 32; //불쾌지수 값 게산
-
+      float di = (1.8*t)-(0.55*(1-(h/100))*(1.8*t-26))+32;//불쾌지수 값 계산
       //isnan(value)는 어떤 값 value가 숫자인지 아닌지 여부를 나타냄
       if (isnan(t) || isnan(h)) {
         //값 읽기 실패시 시리얼 모니터 출력
