@@ -98,14 +98,16 @@ void loop() {
         if (state[i] <= ran[i])  {
           for (int j = state[i] ; j <= ran[i] ; j++)  {
             analogWrite(ledPin[i], 255 - j);  //바꾸고 싶은 값까지 증가
-            delay(2);
+            //delay(2);
+            delay(cycle/100);
           }
         }
         //현재 상태가 바꾸고 싶은 상태 값보다 크다면
         else  {
           for (int j = state[i] ; j >= ran[i] ; j--) {
             analogWrite(ledPin[i], 255 - j);  //바꾸고 싶은 값까지 감소
-            delay(2);
+            //delay(2);
+            delay(cycle/100);
           }
         }
       }
