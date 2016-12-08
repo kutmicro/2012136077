@@ -8,7 +8,7 @@ void reset();
 //색을 출력하도록 하는 함수
 void setColor(int red, int blue, int green);
 
-//각각 RGB LED의 색을 출력할 핀 설정
+//각각 LED의 색을 출력할 핀 설정
 int redPin = 9;
 int greenPin = 10;
 int bluePin = 11;
