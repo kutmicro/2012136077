@@ -109,6 +109,7 @@ void loop() {
           }
         }
       }
+      //현재상태 
       for (int i = 0 ; i < 3 ; i++)  {
         state[i] = ran[i];
       }
